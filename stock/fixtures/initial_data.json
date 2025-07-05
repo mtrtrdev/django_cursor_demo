@@ -1,0 +1,32 @@
+[
+    {
+      "model": "stock.item",
+      "pk": 1,
+      "fields": {
+        "name": "りんご",
+        "quantity": 100,
+        "created_at": "2025-07-05T00:00:00Z",
+        "updated_at": "2025-07-05T00:00:00Z"
+      }
+    },
+    {
+      "model": "stock.item",
+      "pk": 2,
+      "fields": {
+        "name": "みかん",
+        "quantity": 250,
+        "created_at": "2025-07-05T00:00:00Z",
+        "updated_at": "2025-07-05T00:00:00Z"
+      }
+    },
+    {
+      "model": "stock.item",
+      "pk": 3,
+      "fields": {
+        "name": "バナナ",
+        "quantity": 120,
+        "created_at": "2025-07-05T00:00:00Z",
+        "updated_at": "2025-07-05T00:00:00Z"
+      }
+    }
+  ]

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在庫アイテム一覧</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .add-button { display: inline-block; padding: 10px 15px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px; margin-bottom: 20px; }
+        .action-link { margin-right: 10px; text-decoration: none; color: #007bff; }
+        .no-items { margin-top: 20px; color: #666; }
+    </style>
+</head>
+<body>
+    <h1>在庫アイテム一覧</h1>
+
+    <a href="{% url 'stock:item_new' %}" class="add-button">新しいアイテムを追加</a>
+
+    {% if items %}
+        <table>
+            <thead>
+                <tr>
+                    <th>商品名</th>
+                    <th>数量</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in items %}
+                <tr>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>
+                        <a href="{% url 'stock:item_detail' item.pk %}" class="action-link">詳細</a>
+                        <a href="{% url 'stock:item_edit' item.pk %}" class="action-link">編集</a>
+                        <a href="{% url 'stock:item_delete' item.pk %}" class="action-link">削除</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p class="no-items">現在、登録されているアイテムはありません。新しいアイテムを追加してください。</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ item.name }}を削除しますか？</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        h1 { color: #dc3545; }
+        p { margin-bottom: 20px; }
+        .button-group button { padding: 10px 15px; background-color: #dc3545; color: white; border: none; border-radius: 5px; cursor: pointer; margin-right: 10px; }
+        .button-group a { display: inline-block; padding: 10px 15px; background-color: #6c757d; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>「{{ item.name }}」を削除しますか？</h1>
+    <p>この操作は元に戻せません。本当に「{{ item.name }}」を削除してもよろしいですか？</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <div class="button-group">
+            <button type="submit">削除</button>
+            <a href="{% url 'stock:item_detail' item.pk %}">キャンセル</a>
+        </div>
+    </form>
+</body>
+</html>

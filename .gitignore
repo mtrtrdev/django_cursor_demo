@@ -1,0 +1,54 @@
+# Byte-compiled / optimized / dll files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+*.egg-info/
+.pytest_cache/
+
+# Distributions
+dist/
+*.egg
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+*.whl
+*.mo
+*.pot
+
+# Python / Django environment
+.venv/
+env/
+venv/
+venv.bak/
+.python-version
+
+# Database
+*.sqlite3
+*.sqlite
+/db.sqlite3
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build artifacts
+build/
+develop-eggs/
+
+# Media and static files (if managed outside Git, e.g., S3)
+/media/
+/static_collected/
+
+# My custom files/folders
+# Add any other files or directories you want to ignore here.
+# For example:
+# my_secret_config.ini

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>在庫管理システム</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.6; }
+        h1 { color: #333; }
+        h2 { color: #555; border-bottom: 1px solid #eee; padding-bottom: 5px; margin-top: 30px; }
+        ul { list-style-type: disc; margin-left: 20px; }
+        a { color: #007bff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .container { max-width: 800px; margin: auto; background: #f9f9f9; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        .call-to-action { margin-top: 30px; text-align: center; }
+        .call-to-action a { background-color: #28a745; color: white; padding: 12px 25px; border-radius: 5px; font-size: 1.1em; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>在庫管理システムへようこそ</h1>
+
+        <p>このシステムは、シンプルな在庫アイテムの管理を目的としたWebアプリケーションです。商品名と数量を登録し、在庫状況を簡単に把握することができます。</p>
+
+        <h2>システムの主な役割</h2>
+        <ul>
+            <li>**在庫アイテムの登録:** 新しい商品をシステムに登録できます。</li>
+            <li>**在庫アイテムの閲覧:** 登録されているすべてのアイテムを一覧で確認できます。</li>
+            <li>**在庫アイテムの編集:** 既存のアイテムの商品名や数量を更新できます。</li>
+            <li>**在庫アイテムの削除:** 不要になったアイテムをシステムから削除できます。</li>
+        </ul>
+
+        <h2>アクセス方法</h2>
+        <p>システムの主要機能には、以下のURLからアクセスできます。</p>
+        <ul>
+            <li>**在庫アイテム一覧:** <a href="{% url 'stock:item_list' %}"><code>/inventory/list/</code></a></li> {# URLと表示を修正 #}
+            <li>**管理サイト (管理者用):** <a href="{% url 'admin:index' %}"><code>/admin/</code></a></li>
+        </ul>
+
+        <div class="call-to-action">
+            <p>いますぐ在庫管理を始めましょう！</p>
+            <a href="{% url 'stock:item_list' %}">在庫アイテム一覧へ</a> {# 変更なし、'stock:item_list'は'/inventory/list/'を指すようになる #}
+        </div>
+    </div>
+</body>
+</html>
