@@ -124,5 +124,5 @@ python manage.py test stock
 
 開発に関する詳細なルール、アプリケーション構造、およびコーディング規約については、以下のドキュメントを参照してください。
 
-*   **開発ドキュメント:** [`develop.mdc`](./develop.mdc)
+*   **開発ドキュメント:** [`develop.mdc`](./.cursor/rules/develop.mdc)
 *   **アプリケーション仕様書:** [`doc/document.md`](./doc/document.md)
